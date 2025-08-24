@@ -10,6 +10,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayouts);
 app.set('layout', 'layouts/main'); 
+app.use(express.static('src/public'));
 
 // Routes
 const mainroutes = require('./routes/index');
